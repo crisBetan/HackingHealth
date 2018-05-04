@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD5E00C5209C720700322A44 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00C4209C720700322A44 /* ChatMessageCell.swift */; };
+		AD5E00C7209C725800322A44 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00C6209C725800322A44 /* Message.swift */; };
+		AD5E00C9209C72D300322A44 /* ChatBotCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00C8209C72D300322A44 /* ChatBotCollectionViewController.swift */; };
+		AD5E00CB209C76C800322A44 /* DistanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00CA209C76C800322A44 /* DistanceCell.swift */; };
+		AD5E00CD209C76DF00322A44 /* NextShotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00CC209C76DF00322A44 /* NextShotCell.swift */; };
 		ADE7768F209C13F6000B1935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7768E209C13F6000B1935 /* AppDelegate.swift */; };
 		ADE77691209C13F6000B1935 /* MainControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE77690209C13F6000B1935 /* MainControllerViewController.swift */; };
 		ADE77694209C13F6000B1935 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE77692209C13F6000B1935 /* Main.storyboard */; };
@@ -24,6 +29,11 @@
 
 /* Begin PBXFileReference section */
 		06BD822C480945951DA3331E /* Pods-HackingHealt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackingHealt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackingHealt/Pods-HackingHealt.debug.xcconfig"; sourceTree = "<group>"; };
+		AD5E00C4209C720700322A44 /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
+		AD5E00C6209C725800322A44 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		AD5E00C8209C72D300322A44 /* ChatBotCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotCollectionViewController.swift; sourceTree = "<group>"; };
+		AD5E00CA209C76C800322A44 /* DistanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceCell.swift; sourceTree = "<group>"; };
+		AD5E00CC209C76DF00322A44 /* NextShotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextShotCell.swift; sourceTree = "<group>"; };
 		ADE7768B209C13F6000B1935 /* HackingHealt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackingHealt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE7768E209C13F6000B1935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADE77690209C13F6000B1935 /* MainControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +72,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD5E00C0209C719000322A44 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADE77690209C13F6000B1935 /* MainControllerViewController.swift */,
+				ADE776A0209C1AAC000B1935 /* TodayViewController.swift */,
+				ADE776A4209C2449000B1935 /* LoginViewController.swift */,
+				ADE776A6209C2476000B1935 /* SignUpViewController.swift */,
+				ADE776CE209C3FF3000B1935 /* TutorialViewController.swift */,
+				AD5E00C8209C72D300322A44 /* ChatBotCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AD5E00C1209C719B00322A44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ADE776AA209C29F1000B1935 /* User.swift */,
+				AD5E00C6209C725800322A44 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AD5E00C2209C71BE00322A44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD5E00C4209C720700322A44 /* ChatMessageCell.swift */,
+				AD5E00CA209C76C800322A44 /* DistanceCell.swift */,
+				AD5E00CC209C76DF00322A44 /* NextShotCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD5E00C3209C71DC00322A44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ADE776A2209C1B88000B1935 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		ADE77682209C13F6000B1935 = {
 			isa = PBXGroup;
 			children = (
@@ -83,19 +133,16 @@
 		ADE7768D209C13F6000B1935 /* HackingHealt */ = {
 			isa = PBXGroup;
 			children = (
+				AD5E00C3209C71DC00322A44 /* Extensions */,
+				AD5E00C2209C71BE00322A44 /* View */,
+				AD5E00C1209C719B00322A44 /* Models */,
+				AD5E00C0209C719000322A44 /* Controllers */,
 				ADE7768E209C13F6000B1935 /* AppDelegate.swift */,
-				ADE77690209C13F6000B1935 /* MainControllerViewController.swift */,
 				ADE77692209C13F6000B1935 /* Main.storyboard */,
 				ADE77695209C13F8000B1935 /* Assets.xcassets */,
 				ADE77697209C13F8000B1935 /* LaunchScreen.storyboard */,
 				ADE7769A209C13F8000B1935 /* Info.plist */,
-				ADE776A0209C1AAC000B1935 /* TodayViewController.swift */,
-				ADE776A2209C1B88000B1935 /* Extensions.swift */,
-				ADE776A4209C2449000B1935 /* LoginViewController.swift */,
-				ADE776A6209C2476000B1935 /* SignUpViewController.swift */,
 				ADE776A8209C26CD000B1935 /* GoogleService-Info.plist */,
-				ADE776AA209C29F1000B1935 /* User.swift */,
-				ADE776CE209C3FF3000B1935 /* TutorialViewController.swift */,
 			);
 			path = HackingHealt;
 			sourceTree = "<group>";
@@ -228,13 +275,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5E00CB209C76C800322A44 /* DistanceCell.swift in Sources */,
 				ADE776A7209C2476000B1935 /* SignUpViewController.swift in Sources */,
 				ADE77691209C13F6000B1935 /* MainControllerViewController.swift in Sources */,
 				ADE776CF209C3FF3000B1935 /* TutorialViewController.swift in Sources */,
 				ADE7768F209C13F6000B1935 /* AppDelegate.swift in Sources */,
 				ADE776A1209C1AAC000B1935 /* TodayViewController.swift in Sources */,
 				ADE776A5209C2449000B1935 /* LoginViewController.swift in Sources */,
+				AD5E00C5209C720700322A44 /* ChatMessageCell.swift in Sources */,
+				AD5E00C7209C725800322A44 /* Message.swift in Sources */,
 				ADE776A3209C1B88000B1935 /* Extensions.swift in Sources */,
+				AD5E00C9209C72D300322A44 /* ChatBotCollectionViewController.swift in Sources */,
+				AD5E00CD209C76DF00322A44 /* NextShotCell.swift in Sources */,
 				ADE776AB209C29F1000B1935 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

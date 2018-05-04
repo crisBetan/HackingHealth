@@ -13,7 +13,7 @@ class MainControllerViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let today = TodayViewController()
+        let today = TodayTableViewController()
         let todayController = UINavigationController(rootViewController: today)
 //        let home = HomeTableViewController(collectionViewLayout: UICollectionViewFlowLayout())
 //        let homeController = UINavigationController(rootViewController: home)

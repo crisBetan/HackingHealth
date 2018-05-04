@@ -11,7 +11,6 @@ class User: NSObject {
     // values = ["name" : name, "email": email,"profileImageUrl": profileImageUrl]
     var email: String?
     var name: String?
-    var lastName : String?
-    var profileImageUrl:String?
+    var id: String?
     
 }
