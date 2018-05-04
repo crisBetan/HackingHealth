@@ -232,7 +232,7 @@ class SignUpViewController: UIViewController {
             
             
             
-            let objVC = MainControllerViewController()
+            let objVC = TutorialViewController()
             self.present(objVC, animated: true, completion: nil)
         })
         

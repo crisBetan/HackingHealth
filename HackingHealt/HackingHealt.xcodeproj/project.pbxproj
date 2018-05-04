@@ -18,6 +18,7 @@
 		ADE776A7209C2476000B1935 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE776A6209C2476000B1935 /* SignUpViewController.swift */; };
 		ADE776A9209C26CD000B1935 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADE776A8209C26CD000B1935 /* GoogleService-Info.plist */; };
 		ADE776AB209C29F1000B1935 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE776AA209C29F1000B1935 /* User.swift */; };
+		ADE776CF209C3FF3000B1935 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE776CE209C3FF3000B1935 /* TutorialViewController.swift */; };
 		FEA6E228DFBB69DE713F373A /* Pods_HackingHealt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E785F569C6D1E80B591B3E9B /* Pods_HackingHealt.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		ADE776A6209C2476000B1935 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		ADE776A8209C26CD000B1935 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADE776AA209C29F1000B1935 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ADE776CE209C3FF3000B1935 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		D7DFFC080B5DDDBB400DAF8C /* Pods-HackingHealt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackingHealt.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackingHealt/Pods-HackingHealt.release.xcconfig"; sourceTree = "<group>"; };
 		E785F569C6D1E80B591B3E9B /* Pods_HackingHealt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackingHealt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 				ADE776A6209C2476000B1935 /* SignUpViewController.swift */,
 				ADE776A8209C26CD000B1935 /* GoogleService-Info.plist */,
 				ADE776AA209C29F1000B1935 /* User.swift */,
+				ADE776CE209C3FF3000B1935 /* TutorialViewController.swift */,
 			);
 			path = HackingHealt;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				ADE776A7209C2476000B1935 /* SignUpViewController.swift in Sources */,
 				ADE77691209C13F6000B1935 /* MainControllerViewController.swift in Sources */,
+				ADE776CF209C3FF3000B1935 /* TutorialViewController.swift in Sources */,
 				ADE7768F209C13F6000B1935 /* AppDelegate.swift in Sources */,
 				ADE776A1209C1AAC000B1935 /* TodayViewController.swift in Sources */,
 				ADE776A5209C2449000B1935 /* LoginViewController.swift in Sources */,
