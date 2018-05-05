@@ -61,9 +61,11 @@ class LoginViewController: UIViewController {
         
         let imageLogInIcon: UIImageView = {
             let image = UIImageView()
-            image.backgroundColor = UIColor.black
+            image.layer.cornerRadius = 53
+            image.clipsToBounds = true
+            //image.backgroundColor = UIColor.black
             image.translatesAutoresizingMaskIntoConstraints = false
-            //image.clipsToBounds = true
+            image.image = #imageLiteral(resourceName: "logoImage")
             return image
         }()
         
@@ -223,7 +225,7 @@ class LoginViewController: UIViewController {
                 let cancel = UIAlertAction(title: "OK", style: .cancel)
                 alert.addAction(cancel)
                 self.present(alert,animated: true,completion:  nil)
-                //self.returnButtonsNormalState()
+                self.returnButtonsNormalState()
                 
                 return
             }
@@ -236,5 +238,20 @@ class LoginViewController: UIViewController {
         emailLoginTextField.endEditing(false)
         passwordLoginTextField.endEditing(false)
     }
+    func returnButtonsNormalState(){
+        
+        self.activityView?.stopAnimating()
+        
+        self.setLoginButtonEnabled(enabled: false)
+        self.emailLoginTextField.isEnabled = true
+        self.passwordLoginTextField.isEnabled = true
+        self.forgotPasswordButton.isEnabled = true
+        self.signUpButton.isEnabled = true
+        self.loginButton.setTitle("Login", for: .normal)
+        self.emailLoginTextField.text = ""
+        self.passwordLoginTextField.text = ""
+    }
+    
+    
         
 }

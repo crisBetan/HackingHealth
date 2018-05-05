@@ -12,8 +12,17 @@
 		AD5E00C9209C72D300322A44 /* ChatBotCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00C8209C72D300322A44 /* ChatBotCollectionViewController.swift */; };
 		AD5E00CB209C76C800322A44 /* DistanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00CA209C76C800322A44 /* DistanceCell.swift */; };
 		AD5E00CD209C76DF00322A44 /* NextShotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00CC209C76DF00322A44 /* NextShotCell.swift */; };
+		AD5E00CF209C83EF00322A44 /* AssistantV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5E00CE209C83EF00322A44 /* AssistantV1.framework */; };
+		AD5E00D2209CB56800322A44 /* CirclesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00D1209CB56800322A44 /* CirclesCell.swift */; };
+		AD5E00D4209CB59900322A44 /* CirclesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00D3209CB59900322A44 /* CirclesCollectionViewController.swift */; };
+		AD5E00D6209CB69F00322A44 /* AchivmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00D5209CB69F00322A44 /* AchivmentCell.swift */; };
+		AD5E00D8209CB6EE00322A44 /* AchivmentCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00D7209CB6EE00322A44 /* AchivmentCollectionViewController.swift */; };
+		AD5E00DA209CB7F800322A44 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00D9209CB7F800322A44 /* DetailCell.swift */; };
+		AD5E00DC209CB83600322A44 /* DetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00DB209CB83600322A44 /* DetailCollectionViewController.swift */; };
+		AD5E00DE209CB94B00322A44 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00DD209CB94B00322A44 /* SettingsTableViewController.swift */; };
+		AD5E00E0209CB97400322A44 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00DF209CB97400322A44 /* SettingsCell.swift */; };
+		AD5E00E6209CC83000322A44 /* MainControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E00E5209CC82F00322A44 /* MainControllerViewController.swift */; };
 		ADE7768F209C13F6000B1935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7768E209C13F6000B1935 /* AppDelegate.swift */; };
-		ADE77691209C13F6000B1935 /* MainControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE77690209C13F6000B1935 /* MainControllerViewController.swift */; };
 		ADE77694209C13F6000B1935 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE77692209C13F6000B1935 /* Main.storyboard */; };
 		ADE77696209C13F8000B1935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADE77695209C13F8000B1935 /* Assets.xcassets */; };
 		ADE77699209C13F8000B1935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE77697209C13F8000B1935 /* LaunchScreen.storyboard */; };
@@ -34,9 +43,18 @@
 		AD5E00C8209C72D300322A44 /* ChatBotCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotCollectionViewController.swift; sourceTree = "<group>"; };
 		AD5E00CA209C76C800322A44 /* DistanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceCell.swift; sourceTree = "<group>"; };
 		AD5E00CC209C76DF00322A44 /* NextShotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextShotCell.swift; sourceTree = "<group>"; };
+		AD5E00CE209C83EF00322A44 /* AssistantV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssistantV1.framework; path = Carthage/Build/iOS/AssistantV1.framework; sourceTree = "<group>"; };
+		AD5E00D1209CB56800322A44 /* CirclesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesCell.swift; sourceTree = "<group>"; };
+		AD5E00D3209CB59900322A44 /* CirclesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesCollectionViewController.swift; sourceTree = "<group>"; };
+		AD5E00D5209CB69F00322A44 /* AchivmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivmentCell.swift; sourceTree = "<group>"; };
+		AD5E00D7209CB6EE00322A44 /* AchivmentCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchivmentCollectionViewController.swift; sourceTree = "<group>"; };
+		AD5E00D9209CB7F800322A44 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		AD5E00DB209CB83600322A44 /* DetailCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewController.swift; sourceTree = "<group>"; };
+		AD5E00DD209CB94B00322A44 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		AD5E00DF209CB97400322A44 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		AD5E00E5209CC82F00322A44 /* MainControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainControllerViewController.swift; path = /Users/pedroantoniovazquezrodriguez/Desktop/HackingHealt/HackingHealt/HackingHealt/Controllers/MainControllerViewController.swift; sourceTree = "<absolute>"; };
 		ADE7768B209C13F6000B1935 /* HackingHealt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackingHealt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE7768E209C13F6000B1935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ADE77690209C13F6000B1935 /* MainControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerViewController.swift; sourceTree = "<group>"; };
 		ADE77693209C13F6000B1935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADE77695209C13F8000B1935 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADE77698209C13F8000B1935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5E00CF209C83EF00322A44 /* AssistantV1.framework in Frameworks */,
 				FEA6E228DFBB69DE713F373A /* Pods_HackingHealt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +86,7 @@
 		7699F7B070A5C660FA0090EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD5E00CE209C83EF00322A44 /* AssistantV1.framework */,
 				E785F569C6D1E80B591B3E9B /* Pods_HackingHealt.framework */,
 			);
 			name = Frameworks;
@@ -75,12 +95,16 @@
 		AD5E00C0209C719000322A44 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ADE77690209C13F6000B1935 /* MainControllerViewController.swift */,
-				ADE776A0209C1AAC000B1935 /* TodayViewController.swift */,
 				ADE776A4209C2449000B1935 /* LoginViewController.swift */,
 				ADE776A6209C2476000B1935 /* SignUpViewController.swift */,
 				ADE776CE209C3FF3000B1935 /* TutorialViewController.swift */,
 				AD5E00C8209C72D300322A44 /* ChatBotCollectionViewController.swift */,
+				AD5E00D3209CB59900322A44 /* CirclesCollectionViewController.swift */,
+				AD5E00DB209CB83600322A44 /* DetailCollectionViewController.swift */,
+				AD5E00E5209CC82F00322A44 /* MainControllerViewController.swift */,
+				ADE776A0209C1AAC000B1935 /* TodayViewController.swift */,
+				AD5E00D7209CB6EE00322A44 /* AchivmentCollectionViewController.swift */,
+				AD5E00DD209CB94B00322A44 /* SettingsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +124,10 @@
 				AD5E00C4209C720700322A44 /* ChatMessageCell.swift */,
 				AD5E00CA209C76C800322A44 /* DistanceCell.swift */,
 				AD5E00CC209C76DF00322A44 /* NextShotCell.swift */,
+				AD5E00D1209CB56800322A44 /* CirclesCell.swift */,
+				AD5E00D5209CB69F00322A44 /* AchivmentCell.swift */,
+				AD5E00D9209CB7F800322A44 /* DetailCell.swift */,
+				AD5E00DF209CB97400322A44 /* SettingsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,6 +196,7 @@
 				ADE77688209C13F6000B1935 /* Frameworks */,
 				ADE77689209C13F6000B1935 /* Resources */,
 				16E3FFB4362284A1441565A4 /* [CP] Embed Pods Frameworks */,
+				AD5E00D0209C83F500322A44 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -268,6 +297,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AD5E00D0209C83F500322A44 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AssistantV1.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -277,15 +320,23 @@
 			files = (
 				AD5E00CB209C76C800322A44 /* DistanceCell.swift in Sources */,
 				ADE776A7209C2476000B1935 /* SignUpViewController.swift in Sources */,
-				ADE77691209C13F6000B1935 /* MainControllerViewController.swift in Sources */,
+				AD5E00E6209CC83000322A44 /* MainControllerViewController.swift in Sources */,
+				AD5E00DA209CB7F800322A44 /* DetailCell.swift in Sources */,
+				AD5E00D8209CB6EE00322A44 /* AchivmentCollectionViewController.swift in Sources */,
+				AD5E00D2209CB56800322A44 /* CirclesCell.swift in Sources */,
 				ADE776CF209C3FF3000B1935 /* TutorialViewController.swift in Sources */,
 				ADE7768F209C13F6000B1935 /* AppDelegate.swift in Sources */,
 				ADE776A1209C1AAC000B1935 /* TodayViewController.swift in Sources */,
 				ADE776A5209C2449000B1935 /* LoginViewController.swift in Sources */,
 				AD5E00C5209C720700322A44 /* ChatMessageCell.swift in Sources */,
+				AD5E00D4209CB59900322A44 /* CirclesCollectionViewController.swift in Sources */,
+				AD5E00DC209CB83600322A44 /* DetailCollectionViewController.swift in Sources */,
 				AD5E00C7209C725800322A44 /* Message.swift in Sources */,
+				AD5E00E0209CB97400322A44 /* SettingsCell.swift in Sources */,
 				ADE776A3209C1B88000B1935 /* Extensions.swift in Sources */,
 				AD5E00C9209C72D300322A44 /* ChatBotCollectionViewController.swift in Sources */,
+				AD5E00DE209CB94B00322A44 /* SettingsTableViewController.swift in Sources */,
+				AD5E00D6209CB69F00322A44 /* AchivmentCell.swift in Sources */,
 				AD5E00CD209C76DF00322A44 /* NextShotCell.swift in Sources */,
 				ADE776AB209C29F1000B1935 /* User.swift in Sources */,
 			);
@@ -434,6 +485,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4YDAEX93RK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HackingHealt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,6 +508,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4YDAEX93RK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HackingHealt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

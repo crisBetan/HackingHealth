@@ -17,17 +17,23 @@ class TodayTableViewController: UITableViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfUserIsLoggedIn()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self , action: #selector(handleLogout))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "chat", style: .plain, target: self , action: #selector(handleChatBot))
+
         tableView.register(DistanceCell.self, forCellReuseIdentifier: "distanceCell")
         tableView.register(NextShotCell.self, forCellReuseIdentifier: "nextShotCell")
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Hoy"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ChatBot"), style: .plain,  target: self , action: #selector(handleChatBot))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .plain, target: self, action: #selector(handleSettings))
         // Do any additional setup after loading the view.
         fetchUser()
+    }
+    @objc func handleSettings(){
+        let settings = SettingsTableViewController()
+        
+        let settingsController = UINavigationController(rootViewController: settings)
+        present(settingsController, animated: true, completion: nil)
+    
     }
     
     

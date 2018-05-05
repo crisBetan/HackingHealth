@@ -21,7 +21,7 @@ class TutorialViewController: UIViewController {
     let responseLabel: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Respuesta Chida"
+        label.text = "Hola! Soy tu asistente de salud. ¿Como desas que te llame?"
         label.font = UIFont.systemFont(ofSize: 12)
         label.backgroundColor = UIColor.lightGray
         label.textColor = UIColor.black
@@ -58,11 +58,21 @@ class TutorialViewController: UIViewController {
         //button.setTitle("Login", for: .normal)
         button.isEnabled = true
         
-        //button.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
         return button
     }()
     
+    @objc func handleSend(){
+        let main = MainControllerViewController()
+        let mainController = UINavigationController(rootViewController: main)
+        present(mainController, animated: true, completion: nil)
+        
+        
+    }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
@@ -86,7 +96,7 @@ class TutorialViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //responseTextField.becomeFirstResponder()
+        responseTextField.becomeFirstResponder()
         NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillAppear), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
     }

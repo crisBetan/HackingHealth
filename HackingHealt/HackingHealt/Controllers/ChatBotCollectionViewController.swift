@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import AssistantV1
 class ChatBotCollectionViewController: UICollectionViewController,UITextFieldDelegate, UICollectionViewDelegateFlowLayout{
     
     var messages = [Message]()
@@ -17,7 +18,7 @@ class ChatBotCollectionViewController: UICollectionViewController,UITextFieldDel
     
     var user : User?{
         didSet{
-            navigationItem.title = user?.name
+            //navigationItem.title = user?.name
             observeMessages()
         }
     }
@@ -34,6 +35,7 @@ class ChatBotCollectionViewController: UICollectionViewController,UITextFieldDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(handleDismissButton))
         setupInputComponents()
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(ChatMessageCell.self, forCellWithReuseIdentifier: cellId)
@@ -139,7 +141,7 @@ class ChatBotCollectionViewController: UICollectionViewController,UITextFieldDel
         }else {
             cell.bubbleView.backgroundColor = UIColor(r: 240, g: 240, b: 240 )
             cell.textView.textColor = UIColor.black
-            cell.profileImageView.isHidden = false
+            cell.profileImageView.isHidden = true
             cell.bubbleRightAncor?.isActive = false
             cell.bubbleLeftAncor?.isActive = true
         }
@@ -191,12 +193,13 @@ class ChatBotCollectionViewController: UICollectionViewController,UITextFieldDel
         separatorLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
     @objc func handleSend() {
+        let message = inputTextField.text!
         let ref = Database.database().reference().child("messages")
         let childNode = ref.childByAutoId()
         let toId = user!.id!
         let fromId = Auth.auth().currentUser!.uid
         let timeSnap = Int(Date().timeIntervalSince1970)
-        let values = ["text": inputTextField.text!,"toId": toId,"fromId": fromId,"timeSnap":timeSnap] as [String : Any]
+        let values = ["text": message,"toId":"bot","fromId": fromId,"timeSnap":timeSnap] as [String : Any]
         //childNode.updateChildValues(values)
         childNode.updateChildValues(values) { (error, ref) in
             if error != nil{
@@ -211,6 +214,33 @@ class ChatBotCollectionViewController: UICollectionViewController,UITextFieldDel
         let messageId = childNode.key
         userMessagesRef.updateChildValues([messageId : 1])
         
+        let recipientUserMessagesRef = Database.database().reference().child("user-messages").child("bot")
+        recipientUserMessagesRef.updateChildValues([messageId: 1])
+        assistantExample(message: message)
+        //botMessage(message: message)
+        
+    }
+    func botMessage(message:String) {
+        let ref = Database.database().reference().child("messages")
+        let childNode = ref.childByAutoId()
+        let toId = user!.id!
+
+        let timeSnap = Int(Date().timeIntervalSince1970)
+        let values = ["text": message,"toId": toId,"fromId": "bot","timeSnap":timeSnap] as [String : Any]
+        //childNode.updateChildValues(values)
+        childNode.updateChildValues(values) { (error, ref) in
+            if error != nil{
+                print(error)
+                return
+            }
+        }
+        
+        self.inputTextField.text = nil
+        
+        let userMessagesRef = Database.database().reference().child("user-messages").child("bot")
+        let messageId = childNode.key
+        userMessagesRef.updateChildValues([messageId : 1])
+        
         let recipientUserMessagesRef = Database.database().reference().child("user-messages").child(toId)
         recipientUserMessagesRef.updateChildValues([messageId: 1])
         
@@ -218,6 +248,11 @@ class ChatBotCollectionViewController: UICollectionViewController,UITextFieldDel
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         handleSend()
         return true
+    }
+    
+    
+    @objc func handleDismissButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func observeMessages(){
@@ -240,7 +275,7 @@ class ChatBotCollectionViewController: UICollectionViewController,UITextFieldDel
                 message.toId = dictionary["toId"] as? String
                 
                 
-                if message.chatPartnerId() == self.user?.id{
+                if message.chatPartnerId() != self.user?.id{
                     self.messages.append(message)
                     
                     DispatchQueue.main.async(execute: {
@@ -250,5 +285,60 @@ class ChatBotCollectionViewController: UICollectionViewController,UITextFieldDel
                 }
             }, withCancel: nil)
         }, withCancel: nil)
+    }
+    
+//    func assistantExample() {
+//        // Assistant credentials
+//        let username = "your-username-here"
+//        let password = "your-password-here"
+//        let workspace = "your-workspace-id-here"
+//
+//        // instantiate service
+//        let assistant = Assistant(username: username, password: password, version: "2018-03-01")
+//
+//        // start a conversation
+//        assistant.message(workspaceID: workspace) { response in
+//            print("Conversation ID: \(response.context.conversationID!)")
+//            print("Response: \(response.output.text.joined())")
+//
+//            // continue assistant
+//            print("Request: turn the radio on")
+//            let input = InputData(text: "turn the radio on")
+//            let request = MessageRequest(input: input, context: response.context)
+//            assistant.message(workspaceID: workspace, request: request) { response in
+//                print("Response: \(response.output.text.joined())")
+//            }
+//        }
+//    }
+    
+    
+    
+    func assistantExample(message:String) {
+        // Assistant credentials
+        var messagechat :String = "error"
+        let username = "2c979949-dbd0-4fa9-a071-b54e91ca1f3b"
+        let password = "GGnIqR0FVjcw"
+        let workspace = "17f46975-e568-43a4-8dcf-701ff66724f4"
+        
+        // instantiate service
+        let assistant = Assistant(username: username, password: password, version: "2018-03-01")
+        
+        // start a conversation
+        assistant.message(workspaceID: workspace) { response in
+           
+            
+            // continue assistant
+            
+            let input = InputData(text: message)
+            let request = MessageRequest(input: input, context: response.context)
+            assistant.message(workspaceID: workspace, request: request) { response in
+                print("\n\n\n\n\n\n\nmessage: \(input)Response: \(response.output.text.joined())\n\n\n\n\n\n\n\n")
+                
+                self.botMessage(message: response.output.text.joined())
+            }
+        }
+        
+     
+        
     }
 }
